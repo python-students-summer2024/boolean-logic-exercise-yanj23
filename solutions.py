@@ -14,6 +14,11 @@ def is_sweltering():
       :returns: True if the temperature is over 90, False otherwise.
     """
     # write your code for this function below this line.
+    current_temp_1 = int(input("What is the current temperature in Farenheit? "))
+    if current_temp_1 > 90:
+        return True
+    else:
+        return False
 
 
 def is_warm():
@@ -25,6 +30,12 @@ def is_warm():
       :returns: True if the temperature is between 75 and 87, inclusive, False otherwise.
     """
     # write your code for this function below this line.
+    current_temp_2 = int(input("What is the current temperature in Farenheit? "))
+    if 75<=current_temp_2<=87:
+        return True
+    else:
+        return False
+
 
 
 def is_humid():
@@ -36,6 +47,11 @@ def is_humid():
       :returns: True if it is humid today, False otherwise.
     """
     # write your code for this function below this line.
+    humid = input("Is it currently humid? ")
+    if humid == "yes":
+        return True
+    else:
+        return False
 
 
 def is_inclement():
@@ -47,6 +63,11 @@ def is_inclement():
       :returns: True if it is raining, snowing, or sleeting today, False otherwise.
     """
     # write your code for this function below this line.
+    forecast = input("What is the weather forecast today? ")
+    if forecast in ["rain", "snow", "sleet"]:
+        return True
+    else:
+        return False
 
 
 def is_typical_new_york_summer():
@@ -60,6 +81,12 @@ def is_typical_new_york_summer():
       :returns: True if the temperature is over 90 and it is humid, False otherwise.
     """
     # write your code for this function below this line.
+    swelter = is_sweltering()
+    humidity = is_humid()
+    if swelter is True and humidity is True:
+        return True
+    else:
+        return False
 
 
 def is_cool_and_nice():
@@ -72,3 +99,12 @@ def is_cool_and_nice():
       :returns: True if the weather is cool and nice today, False otherwise.
     """
     # write your code for this function below this line.
+    swelter_2 = is_sweltering()
+    warm = is_warm()
+    humid_2 = is_humid()
+    inclement = is_inclement()
+      
+    if swelter_2 is False and warm is False and humid_2 is False and inclement is False:
+        return True
+    else:
+        return False
